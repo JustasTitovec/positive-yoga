@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Option = styled.div`
   /* Auto Layout */
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   margin: 8px 32px 8px 0px;
   width: 352px;
@@ -17,6 +16,32 @@ const Option = styled.div`
   box-sizing: border-box;
   border-radius: 16px;
   font-family: sans-serif;
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 400;
+
+      span {
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   cursor: pointer;
   h5 {
     display: flex;
@@ -34,21 +59,13 @@ const Option = styled.div`
     }
   }
 
-  h2 {
-    font-size: 14px;
-    font-weight: 400;
-
-    span {
-      font-size: 32px;
-      font-weight: 600;
-    }
-  }
   p {
     font-size: 14px;
     font-weight: 200;
+    font-family: sans-serif;
     span {
-      color: #ff9b4e;
       margin-left: 8px;
+      color: #ffe082;
     }
   }
 `;

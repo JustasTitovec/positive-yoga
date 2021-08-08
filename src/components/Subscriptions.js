@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import SubscriptionPricing from './SubscriptionPricing';
-import PrimaryButton from './Button';
+import SubscriptionOption from './SubscriptionPricing';
+import Button from './Button';
 import SubscriptionAdvantages from './SubscriptionAdvantages';
 import plan from '../assets/plan.svg';
 import exercise from '../assets/exercise.svg';
@@ -10,6 +10,8 @@ import diet from '../assets/diet.svg';
 import whistle from '../assets/whistle.svg';
 import watch from '../assets/watch.svg';
 import bookCheck from '../assets/bookCheck.svg';
+import check from '../assets/check.svg';
+import paymentMethods from '../assets/paymentMethods.svg';
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +30,6 @@ const Container = styled.div`
     font-family: sans-serif;
     font-weight: 200;
     color: #22222c;
-    margin-bottom: 8px;
     span {
       font-weight: 600;
     }
@@ -51,14 +52,28 @@ const Advantages = styled.div`
 const Pricing = styled.div`
   display: flex;
   flex-direction: column;
+  width: 350px;
+  margin-right: 32px;
   h3 {
     font-size: 24px;
     font-family: sans-serif;
-    width: 352px;
 
     span {
       color: #ff9b4e;
       font-weight: 700;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    span {
+      color: #90caf9;
+      font-weight: 200;
+      cursor: pointer;
     }
   }
 `;
@@ -75,36 +90,62 @@ const Subscriptions = () => {
           <h3>
             Choose your plan and get <span>7 days free trial</span>
           </h3>
-          <SubscriptionPricing>
-            <h5>
-              6 month plan <span>Save 50% </span>
-            </h5>
-            <h2>
-              <span>$9.99 </span>/ month
-            </h2>
-            <p>
-              <del>$119.99</del>
-              <span>$59.94</span> billed every 6 months
-            </p>
-          </SubscriptionPricing>
-          <SubscriptionPricing>
-            <h5>3 month plan</h5>
-            <h2>
-              <span>$14.99 </span>/ month
-            </h2>
-            <p>
-              <del>$59.97</del>
-              <span>$44.97</span> billed every 6 months
-            </p>
-          </SubscriptionPricing>
-          <SubscriptionPricing>
-            <h5>1 month plan</h5>
-            <h2>
-              <span>$19.99 </span>/ month
-            </h2>
-            <p>Billed monthly</p>
-          </SubscriptionPricing>
-          <PrimaryButton />
+          <SubscriptionOption onClick={(e) => console.log('clicked 1')}>
+            <div className="plans">
+              <h5>
+                6 month plan <span>Save 50% </span>
+              </h5>
+              <h2>
+                <span>$9.99 </span>/ month
+              </h2>
+              <p>
+                <del>$119.99</del>
+                <span>$59.94</span> billed every 6 months
+              </p>
+            </div>
+            <div className="check">
+              <img src={check} alt="check" />
+            </div>
+          </SubscriptionOption>
+          <SubscriptionOption onClick={(e) => console.log('clicked 2')}>
+            <div className="plans">
+              <h5>3 month plan</h5>
+              <h2>
+                <span>$14.99 </span>/ month
+              </h2>
+              <p>
+                <del>$59.97</del>
+                <span>$44.97</span> billed every 6 months
+              </p>
+            </div>
+            <div className="check">
+              <img src={check} alt="check" />
+            </div>
+          </SubscriptionOption>
+          <SubscriptionOption onClick={(e) => console.log('clicked 3')}>
+            <div className="plans">
+              <h5>1 month plan</h5>
+              <h2>
+                <span>$19.99 </span>/ month
+              </h2>
+              <p>Billed monthly</p>
+            </div>
+            <div className="check">
+              <img src={check} alt="check" />
+            </div>
+          </SubscriptionOption>
+          <Button label="Get your plan" />
+          <p>
+            Your free trial will automatically become a paid subscription on the
+            8th day after you begin your trial. To cancel your subscription,
+            please contact us at least 24 hours before the end of the trial
+            period.
+          </p>
+          <p>
+            By choosing a payment method you agree to the <span>T&Cs</span> and{' '}
+            <span>Privacy Policy</span>
+          </p>
+          <img src={paymentMethods} alt="paymentMethods" />
         </Pricing>
         <Advantages>
           <h3>What's in my program?</h3>

@@ -13,11 +13,10 @@ const PrimaryButton = styled.button`
   border: none;
   margin: 16px 0px;
   cursor: pointer;
-  font-family: sans-serif;
 `;
 
-const Button = () => {
-  return <PrimaryButton>Get your plan</PrimaryButton>;
+const Button = ({ label }) => {
+  return <PrimaryButton>{label}</PrimaryButton>;
 };
 
 export default Button;
