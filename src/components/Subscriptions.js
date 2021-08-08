@@ -20,14 +20,12 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 48px;
   h1 {
-    font-family: sans-serif;
     margin-bottom: 32px;
   }
 
   p {
     color: black;
     font-size: 14px;
-    font-family: sans-serif;
     font-weight: 200;
     color: #22222c;
     span {
@@ -43,7 +41,6 @@ const Offer = styled.div`
 const Advantages = styled.div`
   h3 {
     font-size: 24px;
-    font-family: sans-serif;
     width: 352px;
     margin-bottom: 35px;
   }
@@ -56,7 +53,6 @@ const Pricing = styled.div`
   margin-right: 32px;
   h3 {
     font-size: 24px;
-    font-family: sans-serif;
 
     span {
       color: #ff9b4e;

@@ -6,7 +6,6 @@ const Review = styled.div`
   margin-top: 25px;
   margin-right: 16px;
   width: 320px;
-  font-family: sans-serif;
   padding: 16px;
   /* White */
 
@@ -32,7 +31,6 @@ const Review = styled.div`
 
 const ReviewText = styled.p`
   //styleName: Paragraph Regular/P Regular Mobile;
-  font-family: sans-serif;
   margin-top: 16px;
   font-size: 16px;
   font-weight: 100;

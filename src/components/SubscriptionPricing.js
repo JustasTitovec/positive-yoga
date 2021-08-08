@@ -15,7 +15,6 @@ const Option = styled.div`
   border: 2px solid rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
   border-radius: 16px;
-  font-family: sans-serif;
 
   .plans {
     display: flex;
@@ -54,7 +53,6 @@ const Option = styled.div`
       border-radius: 6px;
       font-size: 12px;
       font-weight: 700;
-      font-family: sans-serif;
       margin: 0px 8px;
     }
   }
@@ -62,7 +60,6 @@ const Option = styled.div`
   p {
     font-size: 14px;
     font-weight: 200;
-    font-family: sans-serif;
     span {
       margin-left: 8px;
       color: #ffe082;

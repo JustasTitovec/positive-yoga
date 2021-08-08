@@ -17,7 +17,6 @@ const ReviewContainer = styled.div`
   align-items: center;
   h3 {
     font-size: 24px;
-    font-family: sans-serif;
     margin: 24px 0px;
   }
 `;
@@ -36,7 +35,7 @@ const Reviews = () => {
           place="Delaware, NJ"
           ratingValue={5}
           personImg={reviewPhoto1}
-          review="  I have been using this program for 3 months now and It helped me to lose 16lbs, taught me how to breathe properly and now I look forward to my workout. Great challenges for different problem zones. Definitely recommend to anyone that wants to lose weight and feel better without long hour at the gym or exhausting workouts."
+          review="I have been using this program for 3 months now and It helped me to lose 16lbs, taught me how to breathe properly and now I look forward to my workout. Great challenges for different problem zones. Definitely recommend to anyone that wants to lose weight and feel better without long hour at the gym or exhausting workouts."
         ></ReviewItem>
         <ReviewItem
           name="Kylie, 40"

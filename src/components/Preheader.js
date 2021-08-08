@@ -17,7 +17,6 @@ const Container = styled.div`
     color: #ffffff;
     font-size: 15px;
     font-weight: 200;
-    font-family: sans-serif;
     letter-spacing: 0.5px;
     span {
       font-weight: 400;

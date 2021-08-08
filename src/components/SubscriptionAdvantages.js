@@ -13,7 +13,6 @@ const Advantage = styled.div`
   }
 
   h5 {
-    font-family: sans-serif;
     font-size: 16px;
     width: 289px;
   }
