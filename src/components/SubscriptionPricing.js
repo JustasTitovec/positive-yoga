@@ -21,7 +21,6 @@ const Option = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     p {
       margin: 0;
       text-align: left;
@@ -69,19 +68,46 @@ const Option = styled.div`
   }
 `;
 
-const SubscriptionPricingITem = ({ children }) => {
-  const [clicked, setClicked] = useState(false);
+const SubscriptionPricingITem = ({
+  planDuration,
+  monthPrice,
+  checkImg,
+  priceWithoutDiscount,
+}) => {
+  return (
+    <Option>
+      <div className="plans">
+        <h5>
+          {planDuration} month plan{' '}
+          <span>
+            Save{' '}
+            {Math.abs(
+              Math.ceil(
+                (planDuration * monthPrice * 100) / priceWithoutDiscount - 100
+              )
+            )}
+            %
+          </span>
+        </h5>
+        <h2>
+          <span>${monthPrice} </span>/ month
+        </h2>
 
-  const toggle = (index) => {
-    if (clicked) {
-      //if clicked question is already active, then close it
-      return setClicked(null);
-    }
-
-    setClicked(index);
-  };
-
-  return <Option>{children}</Option>;
+        {planDuration > 1 ? (
+          <p>
+            <del>${priceWithoutDiscount}</del>
+            <span>${planDuration * monthPrice}</span> billed every{' '}
+            {planDuration} months
+          </p>
+        ) : (
+          <p>Billed every {planDuration} month`</p>
+        )}
+      </div>
+      <div className="check">
+        <img src={checkImg} alt="check" />
+      </div>
+    </Option>
+  );
 };
 
 export default SubscriptionPricingITem;

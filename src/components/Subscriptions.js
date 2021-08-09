@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import SubscriptionPricingITem from './SubscriptionPricing';
 import Button from './Button';
@@ -92,50 +92,30 @@ const Subscriptions = ({ title }) => {
           <h3>
             Choose your plan and get <span>7 days free trial</span>
           </h3>
-          <SubscriptionPricingITem onClick={(e) => console.log('clicked 1')}>
-            <div className="plans">
-              <h5>
-                6 month plan <span>Save 50% </span>
-              </h5>
-              <h2>
-                <span>$9.99 </span>/ month
-              </h2>
-              <p>
-                <del>$119.99</del>
-                <span>$59.94</span> billed every 6 months
-              </p>
-            </div>
-            <div className="check">
-              <img src={check} alt="check" />
-            </div>
-          </SubscriptionPricingITem>
-          <SubscriptionPricingITem onClick={(e) => console.log('clicked 2')}>
-            <div className="plans">
-              <h5>3 month plan</h5>
-              <h2>
-                <span>$14.99 </span>/ month
-              </h2>
-              <p>
-                <del>$59.97</del>
-                <span>$44.97</span> billed every 6 months
-              </p>
-            </div>
-            <div className="check">
-              <img src={check} alt="check" />
-            </div>
-          </SubscriptionPricingITem>
-          <SubscriptionPricingITem onClick={(e) => console.log('clicked 3')}>
-            <div className="plans">
-              <h5>1 month plan</h5>
-              <h2>
-                <span>$19.99 </span>/ month
-              </h2>
-              <p>Billed monthly</p>
-            </div>
-            <div className="check">
-              <img src={check} alt="check" />
-            </div>
-          </SubscriptionPricingITem>
+          <SubscriptionPricingITem
+            planDuration={6}
+            monthPrice={9.99}
+            checkImg={check}
+            priceWithoutDiscount={119.94}
+            index={1}
+          />
+
+          <SubscriptionPricingITem
+            planDuration={3}
+            monthPrice={14.99}
+            checkImg={check}
+            priceWithoutDiscount={59.97}
+            index={2}
+          />
+
+          <SubscriptionPricingITem
+            planDuration={1}
+            monthPrice={19.99}
+            checkImg={check}
+            priceWithoutDiscount={59.97}
+            index={3}
+          />
+
           <Button label="Get your plan" primary />
           <p>
             Your free trial will automatically become a paid subscription on the

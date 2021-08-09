@@ -11,7 +11,7 @@ const Question = styled.div`
   padding: 16px;
   cursor: pointer;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 740px;
   }
 
   p {
