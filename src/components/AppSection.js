@@ -9,13 +9,15 @@ const AppReviewContainer = styled.div`
   justify-content: center;
   margin-bottom: 40px;
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 `;
 
 const PhoneAppSide = styled.div`
   margin: 0px 32px;
+  /* clip-path: ellipse(130px 140px at 10% 20%); */
+
   h3 {
     font-size: 24px;
     margin: 24px 0px;
@@ -24,6 +26,8 @@ const PhoneAppSide = styled.div`
 
 const AppIcons = styled.div`
   display: flex;
+  position: relative;
+  background-color: yellow;
 `;
 
 const AppCheckList = styled.div`
@@ -36,13 +40,15 @@ const AppCheckList = styled.div`
 `;
 
 const AppIconsLeft = styled.div`
-  margin: 7px;
+  /* margin: 7px;
+  padding: 0;
   background: #ffffff;
-  border-radius: 24.5878px;
+  border-radius: 24.5878px; */
 `;
 
 const AppIconsRight = styled.div`
-  margin-top: 35px;
+  margin-top: 45px;
+  margin-left: -10px;
 `;
 
 const CheckList = styled.ul``;

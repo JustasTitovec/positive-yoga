@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Option = styled.div`
@@ -70,6 +70,17 @@ const Option = styled.div`
 `;
 
 const SubscriptionPricingITem = ({ children }) => {
+  const [clicked, setClicked] = useState(false);
+
+  const toggle = (index) => {
+    if (clicked) {
+      //if clicked question is already active, then close it
+      return setClicked(null);
+    }
+
+    setClicked(index);
+  };
+
   return <Option>{children}</Option>;
 };
 
