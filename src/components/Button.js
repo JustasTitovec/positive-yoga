@@ -11,12 +11,12 @@ const PrimaryButton = styled.button`
   width: 350px;
   height: 56px;
   border: none;
-  margin: 16px 0px;
+  margin: ${(props) => (props.primary ? '16px 0px' : '48px 0px')};
   cursor: pointer;
 `;
 
 const Button = ({ label }) => {
-  return <PrimaryButton>{label}</PrimaryButton>;
+  return <PrimaryButton primary>{label}</PrimaryButton>;
 };
 
 export default Button;

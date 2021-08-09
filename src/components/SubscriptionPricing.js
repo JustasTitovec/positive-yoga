@@ -5,7 +5,8 @@ const Option = styled.div`
   /* Auto Layout */
   display: flex;
   justify-content: space-between;
-  margin: 8px 32px 8px 0px;
+  margin: 4px 0px;
+
   width: 352px;
   height: 131px;
   padding: 16px;
@@ -20,6 +21,7 @@ const Option = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     p {
       margin: 0;
       text-align: left;
@@ -67,8 +69,8 @@ const Option = styled.div`
   }
 `;
 
-const SubscriptionOption = ({ children }) => {
+const SubscriptionPricingITem = ({ children }) => {
   return <Option>{children}</Option>;
 };
 
-export default SubscriptionOption;
+export default SubscriptionPricingITem;

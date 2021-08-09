@@ -11,11 +11,11 @@ const Checkout = () => {
     <>
       <Preheader />
       <Header />
-      <Subscriptions />
+      <Subscriptions title="Get access to your yoga program now!" />
       <Reviews />
       <AppSection />
       <Questions />
-      <Subscriptions />
+      <Subscriptions title="Start your yoga program today!" />
     </>
   );
 };

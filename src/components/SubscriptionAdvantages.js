@@ -12,19 +12,24 @@ const Advantage = styled.div`
     margin-right: 16px;
   }
 
-  h5 {
-    font-size: 16px;
-    width: 289px;
-  }
   div {
     p {
       font-size: 12px;
+      line-height: 20px;
     }
   }
 `;
 
-const SubscriptionAdvantages = ({ children }) => {
-  return <Advantage>{children}</Advantage>;
+const SubscriptionAdvantages = ({ ImgSrc, title, subtitle }) => {
+  return (
+    <Advantage>
+      <img src={ImgSrc} alt="exercise" />
+      <div>
+        <h5>{title}</h5>
+        <p>{subtitle}</p>
+      </div>
+    </Advantage>
+  );
 };
 
 export default SubscriptionAdvantages;

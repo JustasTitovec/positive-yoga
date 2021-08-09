@@ -7,15 +7,18 @@ const Question = styled.div`
   width: 740px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
-  margin: 8px 0px;
+  margin: 4px 0px;
+  padding: 16px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   p {
-    padding: 16px;
+    font-size: 14px;
     font-weight: 200;
     line-height: 20px;
-    margin-right: 20px;
-    transition: 2s ease-in;
+    margin-top: 16px;
   }
 `;
 
@@ -26,11 +29,10 @@ const Wrap = styled.div`
   h5 {
     font-size: 16px;
     font-weight: 600;
-    padding: 16px;
   }
   span {
     color: #424242;
-    margin-right: 22px;
+    margin-right: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +43,7 @@ const QuestionItem = ({ question, answer, index }) => {
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
-    if (clicked === index) {
+    if (clicked) {
       //if clicked question is already active, then close it
       return setClicked(null);
     }
@@ -53,11 +55,9 @@ const QuestionItem = ({ question, answer, index }) => {
     <Question index={index}>
       <Wrap onClick={() => toggle(index)}>
         <h5>{question}</h5>
-        <span>
-          {clicked === index ? <ExpandLessIcon /> : <KeyboardArrowDownIcon />}
-        </span>
+        <span>{clicked ? <ExpandLessIcon /> : <KeyboardArrowDownIcon />}</span>
       </Wrap>
-      {clicked === index ? <p>{answer}</p> : null}
+      {clicked ? <p>{answer}</p> : null}
     </Question>
   );
 };
