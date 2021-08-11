@@ -5,7 +5,7 @@ const PrimaryButton = styled.button`
   padding: 8px, 40px, 8px, 40px;
   font-size: 16px;
   color: #ffffff;
-  background-color: #ff9b4e;
+  background-color: ${(props) => props.theme.fontColour};
   box-shadow: 0px 16px 32px rgba(255, 155, 78, 0.24);
   border-radius: 8px;
   width: 350px;

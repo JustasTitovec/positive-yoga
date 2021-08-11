@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // Images imports
-import check from '../assets/check.svg';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 const Option = styled.div`
   display: flex;
@@ -66,6 +66,9 @@ const SelectedItemCheck = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  img {
+    color: green;
+  }
 `;
 
 const PricingDeal = styled.p`
@@ -73,10 +76,15 @@ const PricingDeal = styled.p`
   font-weight: 400;
   span {
     margin-left: 8px;
-    color: #ff9b4e;
+    color: ${(props) => props.theme.fontColour};
     font-weight: 700;
   }
 `;
+
+const CheckIcon = styled(CheckCircleIcon)`
+  color: ${(props) => props.theme.fontColour};
+`;
+
 const SubscriptionPricingItem = ({
   planDuration,
   monthPrice,
@@ -128,11 +136,7 @@ const SubscriptionPricingItem = ({
         )}
       </PlanItem>
       <SelectedItemCheck>
-        {option === index ? (
-          <img src={check} alt="check" />
-        ) : (
-          <div className="checkCircle"></div>
-        )}
+        {option === index ? <CheckIcon /> : <div className="checkCircle"></div>}
       </SelectedItemCheck>
     </Option>
   );

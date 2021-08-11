@@ -46,7 +46,7 @@ const Pricing = styled.div`
     font-size: 24px;
     margin: 32px 0px 16px 0px;
     span {
-      color: #ff9b4e;
+      color: ${(props) => props.theme.fontColour};
       font-weight: 700;
     }
   }

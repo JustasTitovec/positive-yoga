@@ -1,5 +1,5 @@
 import Checkout from './pages/Checkout';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Global = createGlobalStyle`
   * {
@@ -10,11 +10,17 @@ const Global = createGlobalStyle`
 }
 `;
 
+const theme = {
+  fontColour: '#FF9B4E',
+};
+
 function App() {
   return (
     <>
-      <Global />
-      <Checkout />
+      <ThemeProvider theme={theme}>
+        <Global />
+        <Checkout />
+      </ThemeProvider>
     </>
   );
 }
