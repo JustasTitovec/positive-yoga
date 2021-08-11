@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+// Images
 import phoneApp1 from '../assets/phoneApp1.svg';
 import phoneApp2 from '../assets/phoneApp2.svg';
 import checkCircle from '../assets/checkCircle.svg';
+import background from '../assets/background.svg';
 
 const AppReviewContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: center;
@@ -16,18 +17,30 @@ const AppReviewContainer = styled.div`
 
 const PhoneAppSide = styled.div`
   margin: 0px 32px;
-  /* clip-path: ellipse(130px 140px at 10% 20%); */
-
   h3 {
     font-size: 24px;
     margin: 24px 0px;
+  }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 20px;
+      padding: 0px 16px;
+    }
   }
 `;
 
 const AppIcons = styled.div`
   display: flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const AppIconsBackground = styled.div`
   position: relative;
-  background-color: yellow;
+  visibility: hidden;
+  @media (max-width: 768px) {
+    visibility: visible;
+  }
 `;
 
 const AppCheckList = styled.div`
@@ -37,21 +50,23 @@ const AppCheckList = styled.div`
     font-size: 24px;
     margin: 24px 0px;
   }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 20px;
+    }
+  }
 `;
 
 const AppIconsLeft = styled.div`
-  /* margin: 7px;
-  padding: 0;
-  background: #ffffff;
-  border-radius: 24.5878px; */
+  position: absolute;
+  margin-top: -10px;
 `;
 
 const AppIconsRight = styled.div`
+  position: absolute;
   margin-top: 45px;
-  margin-left: -10px;
+  margin-left: 194px;
 `;
-
-const CheckList = styled.ul``;
 
 const CheckItem = styled.li`
   display: flex;
@@ -78,6 +93,9 @@ const AppSection = () => {
       <PhoneAppSide>
         <h3>Start your yoga journey now!</h3>
         <AppIcons>
+          <AppIconsBackground>
+            <img src={background} alt="phoneApp" />
+          </AppIconsBackground>
           <AppIconsLeft>
             <img src={phoneApp1} alt="phoneApp" />
           </AppIconsLeft>
@@ -86,9 +104,10 @@ const AppSection = () => {
           </AppIconsRight>
         </AppIcons>
       </PhoneAppSide>
+
       <AppCheckList>
         <h3>Is Positive Yoga right for me?</h3>
-        <CheckList>
+        <div>
           <CheckItem>
             <CheckItemTextImage src={checkCircle} alt="check" />
             <CheckItemText>
@@ -125,7 +144,7 @@ const AppSection = () => {
               Extra attention to muscle, joint and back health
             </CheckItemText>
           </CheckItem>
-        </CheckList>
+        </div>
       </AppCheckList>
     </AppReviewContainer>
   );

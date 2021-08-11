@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// Images imports
 import discount from '../assets/discount.svg';
 
 const Container = styled.div`

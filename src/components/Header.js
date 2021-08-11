@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// Images imports
 import yogaLogo from '../assets/yoga-logo.svg';
 
 const Container = styled.div`

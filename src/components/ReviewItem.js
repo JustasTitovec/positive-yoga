@@ -1,21 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+// Images imports
 import ratingStar from '../assets/ratingStar.svg';
 
 const Review = styled.div`
-  margin-top: 25px;
   margin-right: 16px;
   width: 320px;
   padding: 16px;
-  /* White */
-
   background: #ffffff;
-  /* Card-shadow */
-
   box-shadow: 0px 16px 32px rgba(57, 53, 60, 0.08);
   border-radius: 16px;
+
   h5 {
-    //styleName: Heading 5/H5 Mobile;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -24,13 +20,12 @@ const Review = styled.div`
     text-align: left;
   }
   span {
-    //styleName: Caption/Caption Mobile;
     font-size: 12px;
+    opacity: 0.64;
   }
 `;
 
 const ReviewText = styled.p`
-  //styleName: Paragraph Regular/P Regular Mobile;
   margin-top: 16px;
   font-size: 16px;
   font-weight: 100;

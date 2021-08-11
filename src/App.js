@@ -1,4 +1,3 @@
-import './App.css';
 import Checkout from './pages/Checkout';
 import styled, { createGlobalStyle } from 'styled-components';
 

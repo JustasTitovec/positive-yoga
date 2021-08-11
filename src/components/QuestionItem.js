@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+// Icons imports from Material UI
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
@@ -11,7 +12,7 @@ const Question = styled.div`
   padding: 16px;
   cursor: pointer;
   @media (max-width: 768px) {
-    width: 740px;
+    width: 95%;
   }
 
   p {
@@ -36,6 +37,11 @@ const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 15px;
+    }
   }
 `;
 

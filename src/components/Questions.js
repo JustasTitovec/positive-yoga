@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// Components imports
 import QuestionItem from './QuestionItem';
 import Button from './Button';
 
@@ -13,7 +14,14 @@ const QuestionsContainer = styled.div`
 const Title = styled.h3`
   font-size: 24px;
   margin: 8px 0px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    width: 100%;
+    padding: 0px 16px;
+  }
 `;
+
+const SecondaryButton = styled(Button)``;
 
 const Questions = () => {
   return (
@@ -44,7 +52,7 @@ Based on the questions you answered in the quiz, we’ll craft your personal pla
         question="Why this program is paid?"
         answer="We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback!  "
       />
-      <Button label="Get my plan" />
+      <SecondaryButton label="Get my plan" />
     </QuestionsContainer>
   );
 };

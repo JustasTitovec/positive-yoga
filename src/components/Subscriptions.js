@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SubscriptionPricingITem from './SubscriptionPricing';
-import Button from './Button';
+// Components imports
+import SubscriptionPricingItem from './SubscriptionPricingItem';
 import SubscriptionAdvantages from './SubscriptionAdvantages';
+import Button from './Button';
+// Images imports
 import plan from '../assets/plan.svg';
 import exercise from '../assets/exercise.svg';
 import shoe from '../assets/shoe.svg';
@@ -10,7 +12,6 @@ import diet from '../assets/diet.svg';
 import whistle from '../assets/whistle.svg';
 import watch from '../assets/watch.svg';
 import bookCheck from '../assets/bookCheck.svg';
-import check from '../assets/check.svg';
 import paymentMethods from '../assets/paymentMethods.svg';
 
 const Container = styled.div`
@@ -18,18 +19,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 48px 0px 16px 0px;
-
-  p {
-    color: black;
-    font-size: 14px;
-    font-weight: 200;
-    color: #22222c;
-
-    span {
-      font-weight: 600;
-    }
-  }
 `;
 
 const Offer = styled.div`
@@ -45,6 +34,12 @@ const Advantages = styled.div`
     width: 352px;
     margin: 32px 0px 48px 0px;
   }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 20px;
+      margin: 24px 0px;
+    }
+  }
 `;
 
 const Pricing = styled.div`
@@ -52,9 +47,6 @@ const Pricing = styled.div`
   flex-direction: column;
   width: 350px;
   margin-right: 32px;
-  @media (max-width: 768px) {
-    margin-right: 0px;
-  }
   h3 {
     font-size: 24px;
     margin: 32px 0px 16px 0px;
@@ -63,27 +55,41 @@ const Pricing = styled.div`
       font-weight: 700;
     }
   }
-
-  p {
-    font-size: 12px;
-    text-align: center;
-    line-height: 18px;
-    letter-spacing: 0.5px;
-    margin: 8px 0px;
-    span {
-      color: #90caf9;
-      font-weight: 200;
-      cursor: pointer;
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    h3 {
+      margin: 16px 0px;
+      font-size: 20px;
+      line-height: 28px;
     }
+  }
+`;
+
+const Terms = styled.p`
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  margin: 8px 0px;
+  font-weight: 200;
+  span {
+    color: #90caf9;
+    cursor: pointer;
   }
 `;
 
 const ContainerTitle = styled.h1`
   text-align: left;
   margin: 8px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 16px;
+    font-size: 28px;
+  }
 `;
 
 const Subscriptions = ({ title }) => {
+  const [option, setOption] = useState(1);
+
   return (
     <Container>
       <ContainerTitle>{title}</ContainerTitle>
@@ -92,41 +98,44 @@ const Subscriptions = ({ title }) => {
           <h3>
             Choose your plan and get <span>7 days free trial</span>
           </h3>
-          <SubscriptionPricingITem
+          <SubscriptionPricingItem
             planDuration={6}
             monthPrice={9.99}
-            checkImg={check}
             priceWithoutDiscount={119.94}
             index={1}
+            option={option}
+            setOption={setOption}
           />
 
-          <SubscriptionPricingITem
+          <SubscriptionPricingItem
             planDuration={3}
             monthPrice={14.99}
-            checkImg={check}
             priceWithoutDiscount={59.97}
             index={2}
+            option={option}
+            setOption={setOption}
           />
 
-          <SubscriptionPricingITem
+          <SubscriptionPricingItem
             planDuration={1}
             monthPrice={19.99}
-            checkImg={check}
             priceWithoutDiscount={59.97}
             index={3}
+            option={option}
+            setOption={setOption}
           />
 
           <Button label="Get your plan" primary />
-          <p>
+          <Terms>
             Your free trial will automatically become a paid subscription on the
             8th day after you begin your trial. To cancel your subscription,
             please contact us at least 24 hours before the end of the trial
             period.
-          </p>
-          <p>
+          </Terms>
+          <Terms>
             By choosing a payment method you agree to the <span>T&Cs</span> and{' '}
             <span>Privacy Policy</span>
-          </p>
+          </Terms>
           <img src={paymentMethods} alt="paymentMethods" />
         </Pricing>
         <Advantages>
