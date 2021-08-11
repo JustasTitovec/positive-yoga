@@ -11,10 +11,6 @@ const Option = styled.div`
   height: 131px;
   padding: 16px;
   background: #ffffff;
-  border: ${(props) =>
-    props.option ? 'border: 2px solid #ff9b4e' : 'rgba(0, 0, 0, 0.08)'};
-  /* border: 2px solid rgba(0, 0, 0, 0.08); */
-  box-sizing: border-box;
   border-radius: 16px;
   cursor: pointer;
 

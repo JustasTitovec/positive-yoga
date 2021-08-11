@@ -5,14 +5,9 @@ import SubscriptionPricingItem from './SubscriptionPricingItem';
 import SubscriptionAdvantages from './SubscriptionAdvantages';
 import Button from './Button';
 // Images imports
-import plan from '../assets/plan.svg';
-import exercise from '../assets/exercise.svg';
-import shoe from '../assets/shoe.svg';
-import diet from '../assets/diet.svg';
-import whistle from '../assets/whistle.svg';
-import watch from '../assets/watch.svg';
-import bookCheck from '../assets/bookCheck.svg';
 import paymentMethods from '../assets/paymentMethods.svg';
+// Data from fetching information to component
+import data from '../data';
 
 const Container = styled.div`
   display: flex;
@@ -88,7 +83,10 @@ const ContainerTitle = styled.h1`
 `;
 
 const Subscriptions = ({ title }) => {
-  const [option, setOption] = useState(1);
+  const [option, setOption] = useState(23454);
+
+  const plansTypes = data.plansTypes;
+  const advantages = data.subscriptionAdvantages;
 
   return (
     <Container>
@@ -98,33 +96,19 @@ const Subscriptions = ({ title }) => {
           <h3>
             Choose your plan and get <span>7 days free trial</span>
           </h3>
-          <SubscriptionPricingItem
-            planDuration={6}
-            monthPrice={9.99}
-            priceWithoutDiscount={119.94}
-            index={1}
-            option={option}
-            setOption={setOption}
-          />
-
-          <SubscriptionPricingItem
-            planDuration={3}
-            monthPrice={14.99}
-            priceWithoutDiscount={59.97}
-            index={2}
-            option={option}
-            setOption={setOption}
-          />
-
-          <SubscriptionPricingItem
-            planDuration={1}
-            monthPrice={19.99}
-            priceWithoutDiscount={59.97}
-            index={3}
-            option={option}
-            setOption={setOption}
-          />
-
+          {plansTypes.map((type, i) => {
+            return (
+              <SubscriptionPricingItem
+                key={i}
+                planDuration={type.planDurationMonths}
+                monthPrice={type.monthPrice}
+                priceWithoutDiscount={type.priceWithoutDiscount}
+                index={type.id}
+                option={option}
+                setOption={setOption}
+              />
+            );
+          })}
           <Button label="Get your plan" primary />
           <Terms>
             Your free trial will automatically become a paid subscription on the
@@ -138,50 +122,19 @@ const Subscriptions = ({ title }) => {
           </Terms>
           <img src={paymentMethods} alt="paymentMethods" />
         </Pricing>
+
         <Advantages>
           <h3>What's in my program?</h3>
-
-          <SubscriptionAdvantages
-            ImgSrc={plan}
-            title="A personalized yoga program"
-            subtitle="Completely safe and focused on your key goals"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={exercise}
-            title="Easy & enjoyable yoga workouts for your level"
-            subtitle="Program adjusts to your level and pace"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={shoe}
-            title="No special preparation needed"
-            subtitle="Perfect for begginners! Requires no special preparation or equipment"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={diet}
-            title="Daily motivation & accountability"
-            subtitle="Track your progress, develop a healthy routine, reach goals faster"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={whistle}
-            title="Browse from various yoga challenges"
-            subtitle="30 d morning yoga, mindful yoga, back flexibility challenge, and more!"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={watch}
-            title="Easy access on any device"
-            subtitle="Do your yoga anywhere across all types of devices"
-          />
-
-          <SubscriptionAdvantages
-            ImgSrc={bookCheck}
-            title="A complete guide to get started"
-            subtitle="Best tips, guidelines, advice, and recommendations for successful practice"
-          />
+          {advantages.map((advantage, index) => {
+            return (
+              <SubscriptionAdvantages
+                key={index}
+                ImgSrc={advantage.ImgSrc}
+                title={advantage.title}
+                subtitle={advantage.subtitle}
+              />
+            );
+          })}
         </Advantages>
       </Offer>
     </Container>

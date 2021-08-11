@@ -1,5 +1,5 @@
 import Checkout from './pages/Checkout';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const Global = createGlobalStyle`
   * {
@@ -8,8 +8,6 @@ const Global = createGlobalStyle`
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
-
 `;
 
 function App() {

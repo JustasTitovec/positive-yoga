@@ -6,7 +6,7 @@ const AdvantageItem = styled.div`
   align-items: center;
   line-height: 24px;
   margin-bottom: 10px;
-  width: 345px;
+  width: 350px;
   img {
     margin-right: 16px;
   }

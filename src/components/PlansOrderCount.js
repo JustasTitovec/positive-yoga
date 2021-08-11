@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PlansOrderCountItem = styled.p`
+const PlansOrderCountItem = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 14px;
-  font-weight: 200;
   margin-top: 48px;
   @media (max-width: 450px) {
     width: 100%;
@@ -13,7 +11,10 @@ const PlansOrderCountItem = styled.p`
     margin-top: 16px;
     justify-content: flex-start;
   }
-
+  p {
+    font-size: 14px;
+    font-weight: 200;
+  }
   span {
     font-weight: 600;
   }
@@ -22,9 +23,10 @@ const PlansOrderCountItem = styled.p`
 const PlansOrderCount = () => {
   return (
     <PlansOrderCountItem>
-      <div>
+      <p>
+        {' '}
         Over <span> 52 147</span> plans ordered.
-      </div>
+      </p>
     </PlansOrderCountItem>
   );
 };

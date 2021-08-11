@@ -3,7 +3,7 @@ import React from 'react';
 import Preheader from '../components/Preheader';
 import Header from '../components/Header';
 import Subscriptions from '../components/Subscriptions';
-import Reviews from '../components/Reviews';
+import SuccessStories from '../components/SuccessStories';
 import AppSection from '../components/AppSection';
 import Questions from '../components/Questions';
 import PlansOrderCount from '../components/PlansOrderCount';
@@ -15,7 +15,7 @@ const Checkout = () => {
       <Header />
       <PlansOrderCount />
       <Subscriptions title="Get access to your yoga program now!" />
-      <Reviews />
+      <SuccessStories />
       <AppSection />
       <Questions />
       <Subscriptions title="Start your yoga program today!" />

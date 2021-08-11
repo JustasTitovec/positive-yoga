@@ -3,14 +3,14 @@ import styled from 'styled-components';
 // Images imports
 import ratingStar from '../assets/ratingStar.svg';
 
-const Review = styled.div`
+const SuccessStory = styled.div`
   margin-right: 16px;
+  margin-bottom: 20px;
   width: 320px;
   padding: 16px;
   background: #ffffff;
   box-shadow: 0px 16px 32px rgba(57, 53, 60, 0.08);
   border-radius: 16px;
-
   h5 {
     font-size: 15px;
     font-style: normal;
@@ -25,14 +25,14 @@ const Review = styled.div`
   }
 `;
 
-const ReviewText = styled.p`
+const SuccessStoryText = styled.p`
   margin-top: 16px;
   font-size: 16px;
   font-weight: 100;
   line-height: 24px;
   color: #22222c;
-  &[review='Positive'] {
-    font-weight: 700;
+  [review='Yoga'] {
+    color: red;
   }
 `;
 
@@ -40,9 +40,9 @@ const Rating = styled.div`
   margin-top: 18px;
 `;
 
-const ReviewItem = ({ name, place, ratingValue, personImg, review }) => {
+const SuccessStoryItem = ({ name, place, ratingValue, personImg, story }) => {
   return (
-    <Review>
+    <SuccessStory>
       <h5>{name}</h5>
       <span>{place}</span>
       <Rating>
@@ -63,9 +63,9 @@ const ReviewItem = ({ name, place, ratingValue, personImg, review }) => {
         </span>
       </Rating>
       <img src={personImg} alt="person" />
-      <ReviewText>{review}</ReviewText>
-    </Review>
+      <SuccessStoryText>{story}</SuccessStoryText>
+    </SuccessStory>
   );
 };
 
-export default ReviewItem;
+export default SuccessStoryItem;
