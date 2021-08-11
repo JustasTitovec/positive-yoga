@@ -3,8 +3,9 @@ import styled from 'styled-components';
 // Images
 import phoneApp1 from '../assets/phoneApp1.svg';
 import phoneApp2 from '../assets/phoneApp2.svg';
-import checkCircle from '../assets/checkCircle.svg';
 import background from '../assets/background.svg';
+// Data from fetching information to component
+import data from '../data';
 
 const AppReviewContainer = styled.div`
   display: flex;
@@ -88,6 +89,8 @@ const CheckItemText = styled.ul`
 `;
 
 const AppSection = () => {
+  const appCheckList = data.appCheckList;
+
   return (
     <AppReviewContainer>
       <PhoneAppSide>
@@ -108,42 +111,14 @@ const AppSection = () => {
       <AppCheckList>
         <h3>Is Positive Yoga right for me?</h3>
         <div>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Each program adapts to your age or fitness level
-            </CheckItemText>
-          </CheckItem>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Mindful way to exercise and get real results
-            </CheckItemText>
-          </CheckItem>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Effective and long-term lasting results
-            </CheckItemText>
-          </CheckItem>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Suited activities that benefit both the mind and body
-            </CheckItemText>
-          </CheckItem>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Low-intensity but highly-effective workouts
-            </CheckItemText>
-          </CheckItem>
-          <CheckItem>
-            <CheckItemTextImage src={checkCircle} alt="check" />
-            <CheckItemText>
-              Extra attention to muscle, joint and back health
-            </CheckItemText>
-          </CheckItem>
+          {appCheckList.map((checkItem, i) => {
+            return (
+              <CheckItem key={i}>
+                <CheckItemTextImage src={checkItem.checkImage} alt="checkImg" />
+                <CheckItemText>{checkItem.checkItemDescription}</CheckItemText>
+              </CheckItem>
+            );
+          })}
         </div>
       </AppCheckList>
     </AppReviewContainer>

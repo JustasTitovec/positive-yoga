@@ -10,6 +10,8 @@ import whistle from './assets/whistle.svg';
 import watch from './assets/watch.svg';
 import bookCheck from './assets/bookCheck.svg';
 
+import checkCircle from './assets/checkCircle.svg';
+
 const data = {
   successStories: [
     {
@@ -99,6 +101,33 @@ const data = {
       title: 'A complete guide to get started',
       subtitle:
         'Best tips, guidelines, advice, and recommendations for successful practice',
+    },
+  ],
+  appCheckList: [
+    {
+      checkImage: checkCircle,
+      checkItemDescription: 'Each program adapts to your age or fitness level',
+    },
+    {
+      checkImage: checkCircle,
+      checkItemDescription: 'Mindful way to exercise and get real results',
+    },
+    {
+      checkImage: checkCircle,
+      checkItemDescription: 'Effective and long-term lasting results',
+    },
+    {
+      checkImage: checkCircle,
+      checkItemDescription:
+        'Suited activities that benefit both the mind and body',
+    },
+    {
+      checkImage: checkCircle,
+      checkItemDescription: 'Low-intensity but highly-effective workouts',
+    },
+    {
+      checkImage: checkCircle,
+      checkItemDescription: 'Extra attention to muscle, joint and back health',
     },
   ],
 };
