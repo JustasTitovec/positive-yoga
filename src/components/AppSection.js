@@ -45,6 +45,11 @@ const AppIconsBackground = styled.div`
 `;
 
 const AppCheckList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px;
   margin: 0px 32px;
   width: 350px;
   h3 {
@@ -55,6 +60,10 @@ const AppCheckList = styled.div`
     h3 {
       font-size: 20px;
     }
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 0;
   }
 `;
 

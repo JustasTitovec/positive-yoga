@@ -14,6 +14,8 @@ const SuccessStoriesSection = styled.section`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

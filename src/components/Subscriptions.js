@@ -14,6 +14,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
 `;
 
 const Offer = styled.div`
@@ -24,6 +27,11 @@ const Offer = styled.div`
 `;
 
 const Advantages = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   h3 {
     font-size: 24px;
     width: 352px;
@@ -40,6 +48,8 @@ const Advantages = styled.div`
 const Pricing = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 350px;
   margin-right: 32px;
   h3 {
@@ -53,7 +63,7 @@ const Pricing = styled.div`
   @media (max-width: 768px) {
     margin-right: 0px;
     h3 {
-      margin: 16px 0px;
+      margin: 16px;
       font-size: 20px;
       line-height: 28px;
     }
@@ -70,6 +80,9 @@ const Terms = styled.p`
   span {
     color: #90caf9;
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    padding: 0px 16px;
   }
 `;
 

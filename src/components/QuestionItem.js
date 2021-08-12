@@ -61,7 +61,6 @@ const QuestionItem = ({ question, answer, index }) => {
     <Question index={index}>
       <Wrap onClick={() => toggle(index)}>
         <h5>{question}</h5>
-
         <span>{clicked ? <ExpandLessIcon /> : <KeyboardArrowDownIcon />}</span>
       </Wrap>
       <div>{clicked ? <p>{answer}</p> : null}</div>
