@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // Images imports
 import ratingStar from '../assets/ratingStar.svg';
@@ -44,15 +44,6 @@ const Rating = styled.div`
 `;
 
 const SuccessStoryItem = ({ name, place, ratingValue, personImg, story }) => {
-  const findWord = (story) => {
-    let substr = 'Positive';
-    return story.replace(substr, `<b> + ${substr} + </b>`);
-  };
-
-  useEffect(() => {
-    findWord(story);
-  }, [story]);
-
   return (
     <SuccessStory>
       <h5>{name}</h5>
@@ -75,7 +66,7 @@ const SuccessStoryItem = ({ name, place, ratingValue, personImg, story }) => {
         </span>
       </Rating>
       <img src={personImg} alt="person" />
-      <SuccessStoryText>{findWord(story)}</SuccessStoryText>
+      <SuccessStoryText>{story}</SuccessStoryText>
     </SuccessStory>
   );
 };

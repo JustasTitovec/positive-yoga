@@ -13,9 +13,6 @@ const Option = styled.div`
   background: #ffffff;
   border-radius: 16px;
   cursor: pointer;
-  @media (max-width: 450px) {
-    width: 90%;
-  }
 
   .checkCircle {
     width: 20px;

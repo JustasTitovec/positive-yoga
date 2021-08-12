@@ -14,9 +14,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media (max-width: 450px) {
-    flex-direction: column;
-  }
 `;
 
 const Offer = styled.div`
@@ -28,14 +25,14 @@ const Offer = styled.div`
 
 const Advantages = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 
   h3 {
     font-size: 24px;
     width: 352px;
-    margin: 32px 0px 48px 0px;
+    margin: 16px 0px 48px 0px;
   }
   @media (max-width: 768px) {
     h3 {
@@ -54,7 +51,7 @@ const Pricing = styled.div`
   margin-right: 32px;
   h3 {
     font-size: 24px;
-    margin: 32px 0px 16px 0px;
+    margin: 16px 0px 16px 0px;
     span {
       color: ${(props) => props.theme.fontColour};
       font-weight: 700;
@@ -63,7 +60,6 @@ const Pricing = styled.div`
   @media (max-width: 768px) {
     margin-right: 0px;
     h3 {
-      margin: 16px;
       font-size: 20px;
       line-height: 28px;
     }
@@ -122,7 +118,7 @@ const Subscriptions = ({ title }) => {
               />
             );
           })}
-          <Button label="Get your plan" primary />
+          <Button>Get your plan</Button>
           <Terms>
             Your free trial will automatically become a paid subscription on the
             8th day after you begin your trial. To cancel your subscription,

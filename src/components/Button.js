@@ -11,20 +11,17 @@ const PrimaryButton = styled.button`
   width: 350px;
   height: 56px;
   border: none;
-  margin: ${(props) => (props.primary ? '16px 0px' : '48px 0px')};
+  margin: 16px 0px;
   cursor: pointer;
 
-  @media (max-width: 450px) {
-    width: 90%;
-  }
   &:active {
     box-shadow: 0px 8px 16px rgba(255, 155, 78, 0.24);
     transform: translateY(2px);
   }
 `;
 
-const Button = ({ label }) => {
-  return <PrimaryButton primary>{label}</PrimaryButton>;
+const Button = ({ children, className }) => {
+  return <PrimaryButton className={className}>{children}</PrimaryButton>;
 };
 
 export default Button;

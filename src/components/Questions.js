@@ -21,7 +21,9 @@ const Title = styled.h3`
   }
 `;
 
-const SecondaryButton = styled(Button)``;
+const SecondaryButton = styled(Button)`
+  margin: 48px 0px;
+`;
 
 const Questions = () => {
   return (
@@ -52,7 +54,7 @@ Based on the questions you answered in the quiz, we’ll craft your personal pla
         question="Why this program is paid?"
         answer="We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback!  "
       />
-      <SecondaryButton label="Get my plan" />
+      <SecondaryButton className={SecondaryButton}>Get my plan</SecondaryButton>
     </QuestionsContainer>
   );
 };

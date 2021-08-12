@@ -46,10 +46,9 @@ const AppIconsBackground = styled.div`
 
 const AppCheckList = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  padding: 18px;
   margin: 0px 32px;
   width: 350px;
   h3 {

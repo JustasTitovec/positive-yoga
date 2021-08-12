@@ -9,7 +9,6 @@ import data from '../data';
 const SuccessStoriesSection = styled.section`
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
@@ -62,7 +61,7 @@ const SuccessStories = () => {
           );
         })}
       </SuccessStoriesSection>
-      <SecondaryButton label="Get my plan" />
+      <SecondaryButton className={SecondaryButton}>Get my plan</SecondaryButton>
     </SuccessStoriesContainer>
   );
 };
