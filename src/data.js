@@ -19,8 +19,17 @@ const data = {
       place: 'Delaware, NJ',
       ratingValue: 5,
       personImg: reviewPhoto1,
-      story:
-        'I have been using this program for 3 months now and It helped me to lose 16lbs, taught me how to breathe properly and now I look forward to my workout. Great challenges for different problem zones. Definitely recommend to anyone that wants to lose weight and feel better without long hour at the gym or exhausting workouts',
+      story() {
+        return (
+          <p>
+            I have been using this program for 3 months now and It helped me to
+            lose 16lbs, taught me how to breathe properly and now I look forward
+            to my workout. Great challenges for different problem zones.
+            Definitely recommend to anyone that wants to lose weight and feel
+            better without long hour at the gym or exhausting workouts
+          </p>
+        );
+      },
       id: 123123,
     },
     {
@@ -28,8 +37,20 @@ const data = {
       place: 'Los Angeles',
       ratingValue: 5,
       personImg: reviewPhoto2,
-      story:
-        'I will be very straightforward - I hate sports and working out. Positive Yoga put my physical activity to the next level. I started to enjoy my morning yoga routines where I get my dose of cardio, resistance, and stretching in one place. I could barely hold a plank at the beginning. Now I’m doing various yoga poses that looked impossible at first. My body shape improved a lot and I am very motivated by both: results and the feeling of progress.',
+      story() {
+        return (
+          <p>
+            I will be very straightforward - I hate sports and working out.{' '}
+            <span>Positive Yoga</span> put my physical activity to the next
+            level. I started to enjoy my morning yoga routines where I get my
+            dose of cardio, resistance, and stretching in one place. I could
+            barely hold a plank at the beginning. Now I’m doing various yoga
+            poses that looked impossible at first. My body shape improved a lot
+            and I am very motivated by both: results and the feeling of
+            progress.
+          </p>
+        );
+      },
       id: 786234,
     },
     {
@@ -37,8 +58,19 @@ const data = {
       place: 'San Francisco, CA',
       ratingValue: 5,
       personImg: reviewPhoto3,
-      story:
-        'I have many friends who practice yoga and I decided to try it myself. It is the best decision I have made in a long time. With Positive Yoga program I started to lose weight, which was demotivating me for a long time. Also, I’ve learned about yoga philosophy and poses that encourage me to practice mindfulness and pay attention to stress reduction. I am very proud of myself. Feeling better is my biggest motivation.',
+      story() {
+        return (
+          <p>
+            I have many friends who practice yoga and I decided to try it
+            myself. It is the best decision I have made in a long time. With{' '}
+            <span>Positive Yoga</span> program I started to lose weight, which
+            was demotivating me for a long time. Also, I’ve learned about yoga
+            philosophy and poses that encourage me to practice mindfulness and
+            pay attention to stress reduction. I am very proud of myself.
+            Feeling better is my biggest motivation.
+          </p>
+        );
+      },
       id: 982374,
     },
   ],
@@ -128,6 +160,32 @@ const data = {
     {
       checkImage: checkCircle,
       checkItemDescription: 'Extra attention to muscle, joint and back health',
+    },
+  ],
+  questions: [
+    {
+      index: 62346,
+      question: 'What happens after I order?',
+      answer:
+        'After you place your order, we get to work! Based on the questions you answered in the quiz, we’ll craft your personal plan to your level with recomendations on how to improve. ',
+    },
+    {
+      index: 87345,
+      question: 'Where I can access my plan?',
+      answer:
+        "Your plan will be accessible in Positive Yoga's web app with a special link generated after your purchase.",
+    },
+    {
+      index: 18925,
+      question: 'How can I cancel my subscription?',
+      answer:
+        'You can manage or cancel your subscription by writing our customer support hello@positiveyoga.app ',
+    },
+    {
+      index: 97405,
+      question: 'Why this program is paid?',
+      answer:
+        'We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback!  ',
     },
   ],
 };

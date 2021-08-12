@@ -61,8 +61,7 @@ const AppCheckList = styled.div`
     }
   }
   @media (max-width: 450px) {
-    width: 100%;
-    margin: 0;
+    margin: 0px 16px;
   }
 `;
 

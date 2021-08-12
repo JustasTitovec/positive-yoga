@@ -12,7 +12,7 @@ const SuccessStory = styled.div`
   box-shadow: 0px 16px 32px rgba(57, 53, 60, 0.08);
   border-radius: 16px;
   @media (max-width: 768px) {
-    margin: 0;
+    margin-bottom: 16px;
   }
   h5 {
     font-size: 15px;
@@ -28,14 +28,16 @@ const SuccessStory = styled.div`
   }
 `;
 
-const SuccessStoryText = styled.p`
-  margin-top: 16px;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 24px;
-  color: #22222c;
-  [review='Yoga'] {
-    color: red;
+const SuccessStoryText = styled.div`
+  p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    span {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 `;
 
