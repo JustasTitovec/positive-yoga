@@ -6,13 +6,16 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 const Option = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
-  width: 352px;
   height: 131px;
-  padding: 16px;
-  background: #ffffff;
   border-radius: 16px;
+  padding: 16px;
+  margin-top: 8px;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    height: 120px;
+    width: 100%;
+  }
 
   .checkCircle {
     width: 20px;
@@ -27,10 +30,8 @@ const PlanItem = styled.div`
   flex-direction: column;
   justify-content: space-between;
   h5 {
-    display: flex;
     font-size: 16px;
-    font-weight: 400;
-    align-items: center;
+    font-weight: 600;
     span {
       background-color: #ffe082;
       padding: 5px;
@@ -40,21 +41,21 @@ const PlanItem = styled.div`
       margin: 0px 8px;
     }
   }
-  p {
-    margin: 0;
-    text-align: left;
-  }
+
   h2 {
     font-size: 14px;
     font-weight: 400;
+
     span {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
-  @media (max-width: 768px) {
-    h2 {
+  @media (max-width: 480px) {
+    h5 {
       font-size: 15px;
+    }
+    h2 {
       span {
         font-size: 24px;
       }
@@ -66,9 +67,6 @@ const SelectedItemCheck = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  img {
-    color: green;
-  }
 `;
 
 const PricingDeal = styled.p`
@@ -78,6 +76,9 @@ const PricingDeal = styled.p`
     margin-left: 8px;
     color: ${(props) => props.theme.fontColour};
     font-weight: 700;
+  }
+  @media (max-width: 320px) {
+    font-size: 12px;
   }
 `;
 

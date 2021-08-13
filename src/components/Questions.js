@@ -10,6 +10,7 @@ const QuestionsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0px 16px;
 `;
 
 const Title = styled.h3`

@@ -7,6 +7,9 @@ const AdvantageItem = styled.div`
   line-height: 24px;
   margin-bottom: 10px;
   width: 350px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
   img {
     margin-right: 16px;
   }
@@ -25,7 +28,7 @@ const AdvantageItemDescription = styled.div`
     font-size: 16px;
     font-weight: 600;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     h5 {
       font-size: 15px;
       font-weight: 600;

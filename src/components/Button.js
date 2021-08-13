@@ -14,6 +14,10 @@ const PrimaryButton = styled.button`
   margin: 16px 0px;
   cursor: pointer;
 
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+
   &:active {
     box-shadow: 0px 8px 16px rgba(255, 155, 78, 0.24);
     transform: translateY(2px);

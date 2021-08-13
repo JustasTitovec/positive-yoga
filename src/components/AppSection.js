@@ -42,6 +42,11 @@ const AppIconsBackground = styled.div`
   @media (max-width: 768px) {
     visibility: visible;
   }
+  @media (max-width: 320px) {
+    img {
+      width: 320px;
+    }
+  }
 `;
 
 const AppCheckList = styled.div`
@@ -49,7 +54,7 @@ const AppCheckList = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 0px 32px;
+  padding: 0px 16px;
   width: 350px;
   h3 {
     font-size: 24px;
@@ -62,18 +67,31 @@ const AppCheckList = styled.div`
   }
   @media (max-width: 450px) {
     margin: 0px 16px;
+    width: 100%;
   }
 `;
 
 const AppIconsLeft = styled.div`
   position: absolute;
   margin-top: -10px;
+  @media (max-width: 320px) {
+    img {
+      width: 160px;
+      margin-left: 13px;
+    }
+  }
 `;
 
 const AppIconsRight = styled.div`
   position: absolute;
   margin-top: 45px;
   margin-left: 194px;
+  @media (max-width: 320px) {
+    img {
+      width: 130px;
+      margin-left: -20px;
+    }
+  }
 `;
 
 const CheckItem = styled.li`

@@ -30,6 +30,8 @@ const SuccessStoriesContainer = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding: 0px 16px;
+
     h3 {
       padding: 0px 13px;
       font-size: 20px;

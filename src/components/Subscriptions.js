@@ -11,28 +11,33 @@ import data from '../data';
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  padding: 16px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    h3 {
+      font-size: 28px;
+      margin: 8px 0px;
+    }
+  }
 `;
 
 const Offer = styled.div`
   display: flex;
+  justify-content: center;
+  margin-top: 32px;
   @media (max-width: 768px) {
     flex-direction: column;
+    margin-top: 0px;
+    align-items: center;
   }
 `;
 
 const Advantages = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-
   h3 {
     font-size: 24px;
-    width: 352px;
-    margin: 16px 0px 48px 0px;
+    margin-bottom: 32px;
   }
   @media (max-width: 768px) {
     h3 {
@@ -43,15 +48,10 @@ const Advantages = styled.div`
 `;
 
 const Pricing = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-right: 38px;
   width: 350px;
-  margin-right: 32px;
   h3 {
     font-size: 24px;
-    margin: 16px 0px 16px 0px;
     span {
       color: ${(props) => props.theme.fontColour};
       font-weight: 700;
@@ -59,34 +59,53 @@ const Pricing = styled.div`
   }
   @media (max-width: 768px) {
     margin-right: 0px;
+    width: 350px;
     h3 {
       font-size: 20px;
+      margin: 16px 0px;
       line-height: 28px;
+      span {
+        color: ${(props) => props.theme.fontColour};
+      }
     }
+  }
+  @media (max-width: 450px) {
+    width: 100%;
   }
 `;
 
 const Terms = styled.p`
+  width: 100%;
   font-size: 12px;
   text-align: center;
   line-height: 18px;
   letter-spacing: 0.5px;
   margin: 8px 0px;
   font-weight: 200;
+
   span {
     color: #90caf9;
     cursor: pointer;
   }
+  img {
+    margin-top: 20px;
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
-    padding: 0px 16px;
+    display: none;
   }
 `;
 
 const ContainerTitle = styled.h1`
-  text-align: left;
   margin: 8px 0px;
+  text-align: center;
+  font-size: 40px;
+  @media (max-width: 480px) {
+    text-align: left;
+    font-size: 28px;
+  }
   @media (max-width: 768px) {
-    padding: 0px 16px;
     font-size: 28px;
   }
 `;
@@ -120,16 +139,16 @@ const Subscriptions = ({ title }) => {
           })}
           <Button>Get your plan</Button>
           <Terms>
-            Your free trial will automatically become a paid subscription on the
-            8th day after you begin your trial. To cancel your subscription,
-            please contact us at least 24 hours before the end of the trial
-            period.
+            After 7 days free trial subscription payment is automatically
+            charged from your account unless it is canceled at least 24 hours
+            before the end of the trial period.
           </Terms>
+
           <Terms>
             By choosing a payment method you agree to the <span>T&Cs</span> and{' '}
             <span>Privacy Policy</span>
+            <img src={paymentMethods} alt="paymentMethods" />
           </Terms>
-          <img src={paymentMethods} alt="paymentMethods" />
         </Pricing>
 
         <Advantages>

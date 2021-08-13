@@ -13,6 +13,10 @@ const SuccessStory = styled.div`
   border-radius: 16px;
   @media (max-width: 768px) {
     margin-bottom: 16px;
+    margin-right: 0px;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
   }
   h5 {
     font-size: 15px;
