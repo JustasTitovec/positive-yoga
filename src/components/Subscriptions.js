@@ -74,7 +74,7 @@ const Pricing = styled.div`
   }
 `;
 
-const Terms = styled.p`
+const Terms = styled.div`
   width: 100%;
   font-size: 12px;
   text-align: center;
@@ -92,8 +92,18 @@ const Terms = styled.p`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
-    display: none;
+  .screen-desktop {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .screen-mobile {
+    @media (max-width: 768px) {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -139,11 +149,20 @@ const Subscriptions = ({ title }) => {
           })}
           <Button>Get your plan</Button>
           <Terms>
-            After 7 days free trial subscription payment is automatically
-            charged from your account unless it is canceled at least 24 hours
-            before the end of the trial period.
+            <p className="screen-mobile">
+              After 7 days free trial subscription payment is automatically
+              charged from your account unless it is canceled at least 24 hours
+              before the end of the trial period.
+            </p>
           </Terms>
-
+          <Terms>
+            <p className="screen-desktop">
+              Your free trial will automatically become a paid subscription on
+              the 8th day after you begin your trial. To cancel your
+              subscription, please contact us at least 24 hours before the end
+              of the trial period.
+            </p>
+          </Terms>
           <Terms>
             By choosing a payment method you agree to the <span>T&Cs</span> and{' '}
             <span>Privacy Policy</span>
