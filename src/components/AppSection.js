@@ -55,7 +55,7 @@ const AppCheckList = styled.div`
   align-items: flex-start;
   flex-direction: column;
   padding: 0px 16px;
-  width: 350px;
+  width: 360px;
   h3 {
     font-size: 24px;
     margin: 24px 0px;
@@ -89,7 +89,7 @@ const AppIconsRight = styled.div`
   @media (max-width: 320px) {
     img {
       width: 130px;
-      margin-left: -20px;
+      margin-left: -0px;
     }
   }
 `;

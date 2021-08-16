@@ -58,7 +58,7 @@ const SuccessStories = () => {
               place={story.place}
               ratingValue={story.ratingValue}
               personImg={story.personImg}
-              story={story.story()}
+              story={story.story}
             />
           );
         })}

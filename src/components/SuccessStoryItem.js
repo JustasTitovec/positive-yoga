@@ -32,17 +32,11 @@ const SuccessStory = styled.div`
   }
 `;
 
-const SuccessStoryText = styled.div`
-  p {
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 24px;
-    span {
-      font-size: 16px;
-      font-weight: 700;
-    }
-  }
+const SuccessStoryText = styled.p`
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 24px;
 `;
 
 const Rating = styled.div`
@@ -50,6 +44,11 @@ const Rating = styled.div`
 `;
 
 const SuccessStoryItem = ({ name, place, ratingValue, personImg, story }) => {
+  const checkWords = (text) => {
+    let str = 'Positive Yoga';
+    return text.replace(str, str.bold());
+  };
+
   return (
     <SuccessStory>
       <h5>{name}</h5>
@@ -72,7 +71,9 @@ const SuccessStoryItem = ({ name, place, ratingValue, personImg, story }) => {
         </span>
       </Rating>
       <img src={personImg} alt="person" />
-      <SuccessStoryText>{story}</SuccessStoryText>
+      <SuccessStoryText
+        dangerouslySetInnerHTML={{ __html: checkWords(story) }}
+      ></SuccessStoryText>
     </SuccessStory>
   );
 };

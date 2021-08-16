@@ -49,12 +49,16 @@ const Wrap = styled.div`
 const QuestionItem = ({ question, answer, index }) => {
   const [clicked, setClicked] = useState(false);
 
+  const checkWords = (text) => {
+    let str = 'Positive Yoga';
+    return text.replace(str, str.bold());
+  };
+
   const toggle = (index) => {
     if (clicked) {
       //if clicked question is already active, then close it
       return setClicked(null);
     }
-
     setClicked(index);
   };
 
@@ -64,7 +68,11 @@ const QuestionItem = ({ question, answer, index }) => {
         <h5>{question}</h5>
         <span>{clicked ? <ExpandLessIcon /> : <KeyboardArrowDownIcon />}</span>
       </Wrap>
-      <div>{clicked ? <p>{answer}</p> : null}</div>
+      <div>
+        {clicked ? (
+          <p dangerouslySetInnerHTML={{ __html: checkWords(answer) }}></p>
+        ) : null}
+      </div>
     </Question>
   );
 };
